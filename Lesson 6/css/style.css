@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.all {
+  display: flex; /*esas dive verilir ki onun icerisindeki divleri yanyana duzsun*/
+  flex-direction: row; /*normalda beledi setir uzre duzur*/
+  flex-direction: column; /*sutun uzre duzur*/
+  flex-direction: column-reverse; /*sutun uzre duzub ters cevirir*/
+  flex-direction: row-reverse; /*setir uzre ters duzur*/
+}
+.all .box {
+  flex: 1;
+  height: 200px;
+  background-color: brown;
+  border: 5px solid black;
+}
+
+a {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.hi {
+  display: flex;
+  flex-wrap: wrap; /*setirleri qatla sal asapi*/
+  justify-content: space-between; /*1ni en saga yapisdirir,
+1ni en sola,
+digerlerini eyni ara mesafesinde ortalara*/
+}
+.hi .box {
+  width: 30%; /*just cont vermek olsun*/
+  margin-bottom: 20px;
+  border: 5px solid black;
+  height: 200px;
+  background-color: brown;
+}
+.hi .box:nth-child(3) { /*3cu boxu ferqlendirmek ucun*/
+  border-radius: 100%;
+}
+
+/*Sekillere filter veririk*/
+img {
+  filter: grayscale(1); /*sekili qara rengde edir*/
+  filter: brightness(0.5); /*parlaqligini solgunlasdirir*/
+  filter: contrast(2); /*renginin tundluyunu artirir*/
+  filter: drop-shadow(); /*kolge verir*/
+  /*FILTER IKI DENE ISTIFADE EDIRIKSE YAN YANA YAZIRIQ*/
+  /*Sekile filter vermisense filterin z indexi cox oldugu ucun ustunde yazi varsa itir
+  ona gore de yazi olan box'a z-index veririk*/
+}
+
+/*Box'un ustundeki sekil soldan saga gelirse box text'e left 40%
+box text'e hover olanda left 50%*//*# sourceMappingURL=style.css.map */

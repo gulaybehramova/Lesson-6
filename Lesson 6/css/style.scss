@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// .container{
+//     width: 100%;
+//     padding: 0 4rem;
+// }
+
+    // align-items: center; sutun uzre ortalayir
+
+
+.all{
+    display: flex;  /*esas dive verilir ki onun icerisindeki divleri yanyana duzsun*/
+    flex-direction: row; /*normalda beledi setir uzre duzur*/
+    flex-direction: column;  /*sutun uzre duzur*/
+    flex-direction: column-reverse;  /*sutun uzre duzub ters cevirir*/
+    flex-direction: row-reverse;  /*setir uzre ters duzur*/
+    .box{
+        // width: calc(100%/3) bunun evezine flex:1; veririk 
+        // avtomatik ozu bolur meselen 3divin varsa 100u 3e bolur,
+        //  5divin varsa 100u 5e bolur
+        flex: 1;
+        height: 200px;
+        background-color: brown;
+        border: 5px solid black;
+    }
+}
+
+a{
+    // margin-top: 30px;  ISLEMIR cunki a inlinedir
+    margin-top: 30px;
+    display: inline-block; 
+//  xususiyyeti inlinedir yanyana dusur
+//  sadece olaraq blokun da xususiyyetlerini ozunde dasiyir
+//  element ozu inline olur amma width:  height: vere bilirik;
+
+}
+
+
+.hi{
+    display: flex;
+    flex-wrap: wrap;     /*setirleri qatla sal asagi*/
+    justify-content: space-between;   /*1ni en saga yapisdirir,
+    1ni en sola,
+    digerlerini eyni ara mesafesinde ortalara*/
+
+    .box{
+       width: 30%;   /*just cont vermek olsun*/
+       margin-bottom: 20px;
+       border: 5px solid black;
+       height: 200px;
+       background-color: brown;
+
+    }
+    .box:nth-child(3){       /*3cu boxu ferqlendirmek ucun*/
+        border-radius: 100%;
+    }
+
+    // .box:nth-child(even){       /*cutleri ferqlendirmek ucun*/
+    //     border-radius: 100%;
+    // }
+
+     // .box:nth-child(odd){       /*tekleri ferqlendirmek ucun*/
+    //     border-radius: 100%;
+    // }
+
+    // .box:first-child{                 /*1cini ferqlendirmek ucun*/
+    //     border-radius: 100%;
+    // }
+
+    // .box:last-child{              /*sonuncunu ferqlendirir*/
+    //     border-radius: 100%;
+    // }
+
+}
+
+
+/*Sekillere filter veririk*/
+img{
+    filter: grayscale(1);   /*sekili qara rengde edir*/
+    filter: brightness(0.5);   /*parlaqligini solgunlasdirir*/
+    filter: contrast(2);    /*renginin tundluyunu artirir*/
+    filter: drop-shadow();   /*kolge verir*/ 
+    // ve.s.
+
+  /*FILTER IKI DENE ISTIFADE EDIRIKSE YAN YANA YAZIRIQ*/
+
+  /*Sekile filter vermisense filterin z indexi cox oldugu ucun ustunde yazi varsa itir
+  ona gore de yazi olan box'a z-index veririk*/
+
+}
+
+
+/*Box'un ustundeki yazi soldan saga gelirse box text'e left 40%
+box text'e hover olanda left 50%*/
